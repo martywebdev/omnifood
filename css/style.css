@@ -10,10 +10,11 @@ Default: 1
 
 --- 02 COLORS
 - Primary: #e67e22
-- Tints: 
+- Tints: #fdf2e9
 - Accents: 
 - Greys: 
 #555
+#333
 
 --- 05 SHADOWS
 --- 06 BORDER RADIUS
@@ -29,7 +30,6 @@ Default: 1
 }
 
 html {
-  
   /* 10px / 16px = 0.625 = 62.5%
   this is equal to 10px  
   */
@@ -42,12 +42,42 @@ body {
   font-weight: 400;
   color: #555;
 }
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 9.6rem 0;
+}
 
 .hero {
   max-width: 130rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
+  column-gap: 9.65rem;
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  background-color: #e67e22;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
 }
 
 .hero-img {
