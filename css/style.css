@@ -108,10 +108,10 @@
   color: #cf711f;
   font-weight: 700;
 }
+
 /************************/
 /* FEATURED IN SECTION */
 /**************************/
-
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
 }
@@ -136,6 +136,7 @@
   filter: brightness(0);
   opacity: 50%;
 }
+
 /************************/
 /* HOW IT WORKS SECTION */
 /**************************/
@@ -190,4 +191,34 @@
 
 .step-img {
   width: 35%;
+}
+
+/************************/
+/* MEALS SECTION */
+/**************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal-title {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+}
+
+.meal img {
+  width: 100%;
 }
