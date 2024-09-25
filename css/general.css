@@ -25,6 +25,7 @@ paragraph default:1.6
 #fae5d3
 --- 05 SHADOWS
 --- 06 BORDER RADIUS
+11px
 default 9px
 --- 07 WHITESPACE
 - SPACING SYSTEM (px)
@@ -159,4 +160,8 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+strong {
+  font-weight: 500;
 }
