@@ -14,34 +14,56 @@ yearEl.textContent = currentYear;
 
 // mobile navigation
 const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector('.header')
-btnNavEl.addEventListener('click', ()=> headerEl.classList.toggle('nav-open'))
+const headerEl = document.querySelector(".header");
+btnNavEl.addEventListener("click", () => headerEl.classList.toggle("nav-open"));
 
 // smooth scrolling animation
-const allLinks = document.querySelectorAll('a:link')
-allLinks.forEach(el => {
-    el.addEventListener('click', (e) => {
-        e.preventDefault()
-        const href = el.getAttribute('href')
-       
-        // scroll back to top
-        if(href === '#') {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            })
-        }
-        // scroll to other links
-        if (href !== '#' && href.startsWith('#')) {
-            const sectionEl = document.querySelector(href)
-            sectionEl.scrollIntoView({behavior: "smooth"})
-        }
-        // close mobile navigation
-        if(el.classList.contains('main-nav-link')) {
-            headerEl.classList.toggle('nav-open')
-        }
-    })
-})
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = el.getAttribute("href");
+
+    // scroll back to top
+    if (href === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+    // scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+    // close mobile navigation
+    if (el.classList.contains("main-nav-link")) {
+      headerEl.classList.toggle("nav-open");
+    }
+  });
+});
+
+// sticky navigation
+
+const sectionHeroEl = document.querySelector(".section-hero");
+const obs = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    console.log(ent);
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    } else {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    //in the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionHeroEl);
 
 function checkFlexGap() {
   var flex = document.createElement("div");
