@@ -122,6 +122,7 @@ Instead, 1rem = 1em = 16px
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .main-nav {
@@ -260,7 +261,7 @@ Instead, 1rem = 1em = 16px
   .step-img-box {
     transform: translateY(2.4rem);
   }
-  
+
   .testimonials {
     grid-template-columns: 1fr;
   }
